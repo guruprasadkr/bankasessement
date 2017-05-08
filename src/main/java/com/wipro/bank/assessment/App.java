@@ -7,15 +7,29 @@ import com.wipro.bank.entity.Account;
 
 public class App 
 {
-	public static final List<Account> accounts =new ArrayList<Account>();
+public static final List<Account> accounts=new ArrayList<Account>();
+	
+	public void add(Account a)
+	{
+		accounts.add(a);
+		
+	}
 	public Account getAccountDetailsByID(int id)
 	{
-		return null;
+		Account result=null;
+		for(int i=0;i<accounts.size();i++)
+		{
+		//	System.out.println("i :"+ i + "id :" + id);
+			//System.out.println("data :" + accounts.get(i).getAccountID());
+			if(accounts.get(i).getAccountID()==id)
+			{
+				//System.out.println("1 :"+ result);
+				result = accounts.get(i);
+			}
+		}
 		
-	}
-	public List<Account> getAccountDetailsByBalance(double amount)
-	{
-		return null;
-		
+		return result;
+	
 	}
 }
+
