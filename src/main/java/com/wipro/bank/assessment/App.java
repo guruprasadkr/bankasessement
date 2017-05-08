@@ -31,7 +31,7 @@ public static final List<Account> accounts=new ArrayList<Account>();
 		return result;
 	
 	}
-}
+
 
 public List<Account> getAccountDetailsByBalance(double amount)
 {
